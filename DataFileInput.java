@@ -9,23 +9,23 @@ import java.util.ArrayList;
 public class DataFileInput 
 {
 	public static ArrayList<String[]> dataList = new ArrayList<String[]>();	
-	// создаем ArrayList для результата
+	// СЃРѕР·РґР°РµРј ArrayList РґР»СЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°
 
-	public ArrayList<String[]> getFileData(String fileName)	// метод: читает данные из файла в ArrayList     
+	public ArrayList<String[]> getFileData(String fileName)	// РјРµС‚РѕРґ: С‡РёС‚Р°РµС‚ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р° РІ ArrayList    
 	{
-		String str1;		// переменная для строки данных 
+		String str1;		// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ СЃС‚СЂРѕРєРё РґР°РЅРЅС‹С…
 		try 
 		{
 			BufferedReader reader = new BufferedReader(new FileReader("dataFile.txt"));
 			while ((str1 = reader.readLine()) != null) 
 			{
-				dataList.add(str1.split(";"));			// добавляем в ArrayList разделенные строки
+				dataList.add(str1.split(";"));			// РґРѕР±Р°РІР»СЏРµРј РІ ArrayList СЂР°Р·РґРµР»РµРЅРЅС‹Рµ СЃС‚СЂРѕРєРё
 			}
 			System.out.println("...File reading successful... \n");
 		} 
 		catch (IOException e) 
 		{
-			System.err.format("IOExc:", e);
+			System.err.format("IOException:", e);
 		}
 
 		return dataList;

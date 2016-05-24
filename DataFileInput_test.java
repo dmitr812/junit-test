@@ -16,17 +16,17 @@ import junit.framework.TestCase;
 public class DataFileInput_test 
 	extends TestCase 
 {	
-	private static DataFileInput fileData = new DataFileInput();		// объявление объекта класса FileParser
-    private static int a1;			// переменная для operand1
-    private static int a2;			// переменная для operand2
-    private static String op;		// переменная для operation
-    private static int res;			// переменная для result
+	private static DataFileInput fileData = new DataFileInput();		// РѕР±СЉСЏРІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° DataFileInput
+    private static int a1;			// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ operand1
+    private static int a2;			// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ operand2
+    private static String op;		// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ operation
+    private static int res;			// РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ result
         
    
     public DataFileInput_test(String operand1, String operand2, String operation, String result)  
-    {	// конструктор класса:
-    	// параметры передается в конструктор класса для инициализации полей класса, 
-    	// 									которые будут содержать значения параметров
+    {	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°:
+    	// РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂРµРґР°РµС‚СЃСЏ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РїРѕР»РµР№ РєР»Р°СЃСЃР°, 
+    	// 									РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ
         this.a1 = Integer.parseInt(operand1);		
         this.a2 = Integer.parseInt(operand2);
         this.op = operation;
@@ -34,13 +34,13 @@ public class DataFileInput_test
     }
     
 	
-    @Parameterized.Parameters(name = "{index}: {0} {2} {1} = {3}")		// передаем параметры из файла данных
+    @Parameterized.Parameters(name = "{index}: {0} {2} {1} = {3}")		// РїРµСЂРµРґР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РёР· С„Р°Р№Р»Р° РґР°РЅРЅС‹С…
     public static ArrayList<String[]> params()					
     {
-    	ArrayList<String[]> resultList = new ArrayList<String[]>();	// создаем ArrayList для результата
-    	resultList = fileData.getFileData("dataFile.txt");			// читаем данные из файла в ArrayList
-    	return resultList;											// возвращаемый тип метода должен быть List[]	
-    }										// значения из resultList передаются в конструктор в качестве аргументов
+    	ArrayList<String[]> resultList = new ArrayList<String[]>();	// СЃРѕР·РґР°РµРј ArrayList РґР»СЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+    	resultList = fileData.getFileData("dataFile.txt");			// С‡РёС‚Р°РµРј РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р° РІ ArrayList
+    	return resultList;											// РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ С‚РёРї РјРµС‚РѕРґР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ List[]	
+    }										// Р·РЅР°С‡РµРЅРёСЏ РёР· resultList РїРµСЂРµРґР°СЋС‚СЃСЏ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РІ РєР°С‡РµСЃС‚РІРµ Р°СЂРіСѓРјРµРЅС‚РѕРІ
     
 
 	@BeforeClass
